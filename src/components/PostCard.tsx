@@ -10,23 +10,23 @@ const PostCard = ({
 }: Props) => {
   return (
     <Link href={`/posts/${path}`}>
-      <div className="text-center max-w-60 shadow rounded-sm">
+      <article className="shadow-md rounded-md overflow-hidden hover:shadow-xl hover:-translate-y-2">
         <Image
-          className="rounded-t-sm"
+          className="w-full"
           src={`/images/posts/${path}.png`}
           alt={title}
           width={300}
           height={200}
         />
-        <div className="p-2">
-          <time className="text-sm text-right">{date.toString()}</time>
-          <h3 className="font-bold text-ellipsis mt-2">{title}</h3>
-          <p className="my-1 text-ellipsis">{description}</p>
-          <span className="bg-green-200 text-sm rounded-full px-2">
+        <div className="flex flex-col items-center p-4">
+          <time className="self-end text-gray-700">{date.toString()}</time>
+          <h3 className="text-lg font-bold">{title}</h3>
+          <p className="w-full truncate text-center">{description}</p>
+          <span className="bg-green-100 text-sm rounded-lg px-2 my-2">
             {category}
           </span>
         </div>
-      </div>
+      </article>
     </Link>
   );
 };
