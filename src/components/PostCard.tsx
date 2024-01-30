@@ -10,7 +10,7 @@ const PostCard = ({
 }: Props) => {
   return (
     <Link href={`/posts/${path}`}>
-      <article className="shadow-md rounded-md overflow-hidden hover:shadow-xl hover:-translate-y-2">
+      <article className="shadow-md rounded-md overflow-hidden hover:shadow-xl">
         <Image
           className="w-full"
           src={`/images/posts/${path}.png`}
